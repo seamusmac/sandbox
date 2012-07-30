@@ -1,0 +1,119 @@
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,
+		Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+p,h1,form {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.spacer {
+	clear: both;
+	height: 1px;
+}
+/* ----------- My Form ----------- */
+.myform {
+	margin: 0 auto;
+	width: 400px;
+	padding: 14px;
+}
+
+/* ----------- stylized ----------- */
+.stylized {
+	border: solid 2px #b7ddf2;
+	background: #ebf4fb;
+}
+
+.stylized h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.stylized p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #b7ddf2;
+	padding-bottom: 10px;
+}
+
+.stylized label {
+	display: block;
+	text-align: right;
+	width: 140px;
+	float: left;
+	padding-top: 2px;
+}
+
+.stylized .gwt-Label {
+	display: block;
+	text-align: right;
+	width: 140px;
+	float: left;
+	padding-top: 2px;
+}
+
+.stylized .small {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	width: 140px;
+}
+
+.stylized .gwt-ListBox {
+	float: left;
+	font-size: 12px;
+	padding: 2px 2px;
+	border: solid 1px #aacfe4;
+	width: 205px;
+	margin: 0px 0 10px 10px;
+}
+
+.stylized .gwt-CheckBox {
+	float: left;
+	font-size: 12px;
+	padding: 4px 5px 0px 0px;
+	border: solid 1px #aacfe4;
+	width: 200px;
+	margin: 0px 0 10px 10px;
+}
+
+.stylized input {
+	float: left;
+	font-size: 12px;
+	padding: 2px 2px;
+	border: solid 1px #aacfe4;
+	width: 200px;
+	margin: 0px 0 10px 10px;
+}
+
+.stylized button {
+	clear: both;
+	margin-left: 150px;
+	width: 130px;
+	height: 27px;
+	border: solid 1px #6E93B0;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px;
+	text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+	background: #666666 url(img/btn-sm-bg.png) repeat-x 0px 0px;
+	text-align: center;
+	line-height: 20px;
+	color: #3E6B99;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.validationFailedBorder {
+	border: 2px dotted #ff0000;
+}
+
+.validationFailedBackground {
+	background-color: #ff0000;
+}

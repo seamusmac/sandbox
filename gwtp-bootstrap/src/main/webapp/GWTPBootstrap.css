@@ -1,0 +1,25 @@
+/* Add css rules here for your application. */
+
+.verify-panel
+{
+	margin						:	15px auto;
+	background-color			:	#BED9E8;
+	border						:	solid 1px #aacfe4;
+	padding						: 	5px 5px;
+}
+
+.verify-panel-focused{
+	margin						:	15px auto;
+	background-color			:	#b7ddf2;
+	border						:	solid 1px #FFFFFF;
+	padding						: 	5px 5px;
+}
+
+.validationFailedBorder {
+	border: 2px dotted #ff0000;
+}
+
+.validationFailedBackground {
+	background-color: #ff0000;
+}
+
