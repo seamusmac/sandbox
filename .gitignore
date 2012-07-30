@@ -1,0 +1,25 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+#java specific
+*.class
+*.jar
+
+
+#maven specific
+target
+
+#gwt specific
+gwt-unitCache
+.gwt
+/build
+/classes
+*~
+*/web-app/GWTPBootstrap
+*/web-app/WEB-INF/classes
+
+
