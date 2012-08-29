@@ -1,10 +1,17 @@
 package com.ie.sm.client.ui.address;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.ValidatorFactory;
 
 import com.github.gwtbootstrap.client.ui.ValueListBox;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.editor.client.Editor;
+import com.google.gwt.editor.client.SimpleBeanEditorDriver;
 import com.google.gwt.i18n.client.DefaultLocalizedNames;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -20,6 +27,10 @@ public class AddressEditor extends Composite implements Editor<AddressDTO> {
 	
 	interface AddressEditorUiBinder extends UiBinder<Widget, AddressEditor> {
 	}
+	
+	interface Driver extends SimpleBeanEditorDriver<AddressDTO, AddressEditor> {
+	}
+	private Driver driver;
 	
 	@UiField
 	BootstrapDecorator<String> addressLine1;
@@ -42,6 +53,35 @@ public class AddressEditor extends Composite implements Editor<AddressDTO> {
 		DefaultLocalizedNames loc = new DefaultLocalizedNames();
 		countryList.setAcceptableValues(Arrays.asList(loc.getSortedRegionCodes()));
 		initWidget(uiBinder.createAndBindUi(this));
-		
+		setupDrivers();
 	}
+	
+	private void setupDrivers() {
+		driver = GWT.create(Driver.class);
+		driver.initialize(this);
+		driver.edit(new AddressDTO());
+	}
+	
+	private boolean validationSuccessful() {
+		ValidatorFactory factory = Validation.byDefaultProvider().configure().buildValidatorFactory();
+		Set<ConstraintViolation<AddressDTO>> violations = factory.getValidator().validate(driver.flush());
+		if (violations.size() > 0) {
+			driver.setConstraintViolations(new HashSet<ConstraintViolation<?>>(violations));
+		}
+		if (violations.size() > 0) {
+			return false;
+		}
+
+		return true;
+	}
+	
+	public AddressDTO getAddressDTO(){
+		if (validationSuccessful()) {
+			AddressDTO person = driver.flush();
+			return person;
+		}
+		return null;
+	}
+	
+	
 }

@@ -1,10 +1,12 @@
 package com.ie.sm.shared;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class AddressDTO {
 
 	@NotNull
+	@Size(min=1)
 	public String addressLine1;
 	@NotNull
 	public String addressLine2;
