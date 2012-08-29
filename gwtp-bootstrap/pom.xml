@@ -115,6 +115,7 @@
 					<runTarget>GWTPBootstrap.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
 					<inplace>true</inplace>
+					<extraParam>-strict</extraParam>
 				</configuration>
 			</plugin>
 			<!-- Copy static web files before executing gwt:run -->
@@ -133,6 +134,7 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
+					<compilerArgument>-strict</compilerArgument>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,0 +1,65 @@
+<!DOCTYPE ui:UiBinder>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui" xmlns:a1='urn:import:com.ie.sm.client.decorators'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:e="urn:import:com.google.gwt.editor.ui.client"
+	xmlns:p1="urn:import:com.google.gwt.editor.ui.client">
+
+	<g:HTMLPanel>
+		<b:ControlGroup>
+			<b:ControlLabel for="addressLine1">Address Line 1</b:ControlLabel>
+			<b:Controls>
+				<a1:BootstrapDecorator ui:field="addressLine1">
+					<a1:valuebox>
+						<b:TextBox alternateSize="MEDIUM" />
+					</a1:valuebox>
+				</a1:BootstrapDecorator>
+			</b:Controls>
+		</b:ControlGroup>
+
+		<b:ControlGroup>
+			<b:ControlLabel for="addressLine2">Address Line 2</b:ControlLabel>
+			<b:Controls>
+				<a1:BootstrapDecorator ui:field="addressLine2">
+					<a1:valuebox>
+						<b:TextBox alternateSize="MEDIUM" />
+					</a1:valuebox>
+				</a1:BootstrapDecorator>
+			</b:Controls>
+		</b:ControlGroup>
+
+		<b:ControlGroup>
+			<b:ControlLabel for="addressLine3">Address Line 3</b:ControlLabel>
+			<b:Controls>
+				<a1:BootstrapDecorator ui:field="addressLine3">
+					<a1:valuebox>
+						<b:TextBox alternateSize="MEDIUM" />
+					</a1:valuebox>
+				</a1:BootstrapDecorator>
+			</b:Controls>
+		</b:ControlGroup>
+
+		<b:ControlGroup>
+			<b:ControlLabel for="addressLine4">Address Line 4</b:ControlLabel>
+			<b:Controls>
+				<a1:BootstrapDecorator ui:field="addressLine4">
+					<a1:valuebox>
+						<b:TextBox alternateSize="MEDIUM" />
+					</a1:valuebox>
+				</a1:BootstrapDecorator>
+			</b:Controls>
+		</b:ControlGroup>
+
+		<b:ControlGroup>
+			<b:ControlLabel for="country">Country</b:ControlLabel>
+			<b:Controls>
+				<a1:BootstrapValueListDecorator ui:field="country">
+					<a1:valuebox>
+						<b:ValueListBox alternateSize="MEDIUM" ui:field="countryList"/>
+					</a1:valuebox>
+				</a1:BootstrapValueListDecorator>
+			</b:Controls>
+		</b:ControlGroup>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

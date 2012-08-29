@@ -1,0 +1,5 @@
+/target
+/src/main/webapp/GWTPBootstrap
+/src/main/webapp/WEB-INF/deploy
+/src/main/webapp/WEB-INF/classes
+/src/main/gwt-unitCache
