@@ -17,19 +17,11 @@
 	<inherits name="com.gwtplatform.mvp.Mvp" />
 	<inherits name="com.gwtplatform.dispatch.Dispatch" />
 	<inherits name="com.google.gwt.editor.Editor" />
-	<inherits name="org.fusesource.restygwt.RestyGWT" />
-	<inherits name="com.claudiushauptmann.gwt.recaptcha.gwt-recaptcha" />
-	
 
-<!--	<inherits name="org.hibernate.validator.HibernateValidator" />
+	<inherits name="org.hibernate.validator.HibernateValidator" />
 	<replace-with class="com.ardanone.client.ui.validation.ValidatorFactory">
-        <when-type-is class="javax.validation.ValidatorFactory" />
-    </replace-with>
- 	<replace-with class="com.ardanone.client.validation.ValidationMessagesResolver"> -->
-<!--         <when-type-is -->
-<!--                  class="com.google.gwt.validation.client.UserValidationMessagesResolver" /> -->
-<!--     </replace-with> -->
-
+		<when-type-is class="javax.validation.ValidatorFactory" />
+	</replace-with>
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class="com.ie.sm.client.GWTPBootstrap" />
